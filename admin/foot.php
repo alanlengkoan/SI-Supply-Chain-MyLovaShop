@@ -1,0 +1,27 @@
+
+      <!-- Pemanggilan jQuery -->
+      <script src="../vendor/jquery/jquery.min.js"></script>
+
+      <!-- Pemanggilan Bootstrap Core JavaScript -->
+      <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+      <!-- Custom Theme Scripts -->
+      <script src="../css/js/custom.min.js"></script>
+
+      <!-- Pemanggilan DataTables -->
+      <script src="../vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+      <script src="../vendor/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+      <script src="../vendor/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+      <script src="../vendor/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+      <script src="../vendor/datatables.net-buttons/js/buttons.flash.min.js"></script>
+      <script src="../vendor/datatables.net-buttons/js/buttons.html5.min.js"></script>
+      <script src="../vendor/datatables.net-buttons/js/buttons.print.min.js"></script>
+      <script src="../vendor/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+      <script src="../vendor/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+      <script src="../vendor/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+      <script src="../vendor/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+      <script src="../vendor/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+      <script src="../vendor/js/datatables.js"></script>
+
+  </body>
+</html>
