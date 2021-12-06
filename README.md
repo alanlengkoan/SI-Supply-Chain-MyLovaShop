@@ -1,2 +1,2 @@
-# SI-Logistik-Berbasis-Website
-Sistem Informasi Logistik Berbasis Website
+# SI-Supply-Chain-MyLovaShop
+Sistem Informasi Supply Chain Pada MyLovaShop

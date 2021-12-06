@@ -2,9 +2,9 @@
 
 // Koneksi
 $host = "localhost";
-$user = "root";
-$pass = "";
-$dbnm = "logistik";
+$user = "my_root";
+$pass = "my_pass";
+$dbnm = "si_sc_mylovashop";
 
 $mysqli = new mysqli($host, $user, $pass, $dbnm);
 if ($mysqli->connect_errno) {
