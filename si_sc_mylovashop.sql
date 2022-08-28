@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: 29 Jun 2018 pada 07.14
--- Versi Server: 10.1.29-MariaDB
--- PHP Version: 7.2.0
+-- Host: localhost
+-- Generation Time: Aug 28, 2022 at 05:49 PM
+-- Server version: 5.7.24
+-- PHP Version: 7.4.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `logistik`
+-- Database: `si_sc_mylovashop`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dta_barang`
+-- Table structure for table `dta_barang`
 --
 
 CREATE TABLE `dta_barang` (
@@ -40,7 +39,7 @@ CREATE TABLE `dta_barang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `dta_barang`
+-- Dumping data for table `dta_barang`
 --
 
 INSERT INTO `dta_barang` (`kd_barang`, `nama`, `jumlah`, `harga`, `satuan`, `kondisi`, `stock_awal`, `stock_terjual`) VALUES
@@ -57,7 +56,7 @@ INSERT INTO `dta_barang` (`kd_barang`, `nama`, `jumlah`, `harga`, `satuan`, `kon
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dta_supplier`
+-- Table structure for table `dta_supplier`
 --
 
 CREATE TABLE `dta_supplier` (
@@ -71,7 +70,7 @@ CREATE TABLE `dta_supplier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `dta_supplier`
+-- Dumping data for table `dta_supplier`
 --
 
 INSERT INTO `dta_supplier` (`id_supplier`, `nama`, `nomor`, `fax`, `email`, `website`, `alamat`) VALUES
@@ -83,7 +82,7 @@ INSERT INTO `dta_supplier` (`id_supplier`, `nama`, `nomor`, `fax`, `email`, `web
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dta_trnsaksi_brng_keluar`
+-- Table structure for table `dta_trnsaksi_brng_keluar`
 --
 
 CREATE TABLE `dta_trnsaksi_brng_keluar` (
@@ -100,7 +99,7 @@ CREATE TABLE `dta_trnsaksi_brng_keluar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `dta_trnsaksi_brng_keluar`
+-- Dumping data for table `dta_trnsaksi_brng_keluar`
 --
 
 INSERT INTO `dta_trnsaksi_brng_keluar` (`id_transaksi`, `id_supplier`, `nmasup`, `kd_barang`, `nmabar`, `jumlah`, `harga`, `total`, `status`, `waktu`) VALUES
@@ -108,7 +107,7 @@ INSERT INTO `dta_trnsaksi_brng_keluar` (`id_transaksi`, `id_supplier`, `nmasup`,
 ('TRSBK-0002', 'IDSUP-0001', 'Pt. Maju Mundur', 'KDR-0001', 'Kulkas', 10, 3500000, 35000000, 'On-Process', '2018-06-28 15.08.23');
 
 --
--- Trigger `dta_trnsaksi_brng_keluar`
+-- Triggers `dta_trnsaksi_brng_keluar`
 --
 DELIMITER $$
 CREATE TRIGGER `kurangjumlahbarang` AFTER INSERT ON `dta_trnsaksi_brng_keluar` FOR EACH ROW begin
@@ -120,7 +119,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dta_trnsaksi_brng_masuk`
+-- Table structure for table `dta_trnsaksi_brng_masuk`
 --
 
 CREATE TABLE `dta_trnsaksi_brng_masuk` (
@@ -136,7 +135,7 @@ CREATE TABLE `dta_trnsaksi_brng_masuk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `dta_trnsaksi_brng_masuk`
+-- Dumping data for table `dta_trnsaksi_brng_masuk`
 --
 
 INSERT INTO `dta_trnsaksi_brng_masuk` (`id_transaksi`, `id_supplier`, `nmasup`, `kd_barang`, `nmabar`, `jumlah`, `harga`, `total`, `waktu`) VALUES
@@ -147,7 +146,7 @@ INSERT INTO `dta_trnsaksi_brng_masuk` (`id_transaksi`, `id_supplier`, `nmasup`, 
 ('TRSBM-0005', 'IDSUP-0004', 'Pt. Indah Sekali', 'KDR-0002', 'Televisi (TV)', 25, 4500000, 112500000, '2018-06-28 19.34.36');
 
 --
--- Trigger `dta_trnsaksi_brng_masuk`
+-- Triggers `dta_trnsaksi_brng_masuk`
 --
 DELIMITER $$
 CREATE TRIGGER `tambahjumlahbarang` AFTER INSERT ON `dta_trnsaksi_brng_masuk` FOR EACH ROW begin
@@ -159,7 +158,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `masuk`
+-- Table structure for table `masuk`
 --
 
 CREATE TABLE `masuk` (
@@ -169,7 +168,7 @@ CREATE TABLE `masuk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `masuk`
+-- Dumping data for table `masuk`
 --
 
 INSERT INTO `masuk` (`id`, `username`, `password`) VALUES
